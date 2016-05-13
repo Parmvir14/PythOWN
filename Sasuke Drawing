@@ -1,0 +1,177 @@
+##################################################################
+#                                                                #
+#                       Title: Sasuke!                           #
+#                   Created by: Parmvir Bath                     #
+#                                                                #
+##################################################################
+from tkinter import *
+from random import *
+import random
+interface=Tk()
+screen=Canvas(interface, width=1000, height=422, background= "white")
+screen.pack()
+
+#SKY - One of my random patterns 
+c = ["#566d8f","#506c95","#4b6b9b","#456aa1","#3f68a6",
+     "#3967ac","#3466b2","#2e65b8","#2864bd","#2263c3",
+     "#1d62c9","#1760cf","#115fd4","#0b5eda","#065de0"]
+#Sky changes colour from light blue to darker blue
+y2 = 422
+for n in range(0,15):
+    screen.create_rectangle(0,0,1000,y2, fill = c[n], outline = c[n])
+    y2 = y2 -28
+
+
+#CLOUDS - One of my random patterns (clouds are different colours)
+for n in range(0,20):
+    x = randint(650,800)
+    y = randint(50,150)
+    x2 = x + 100
+    y2 = y + 50
+    screen.create_oval(x,y,x2,y2,fill="#D9E2E9",outline="#D9E2E9")
+
+    x = randint(20,100)
+    y = randint(100,140)
+    x2 = x + 100
+    y2 = y + 50
+    screen.create_oval(x,y,x2,y2,fill="#D8E2EA",outline="#D8E2EA")
+
+    x = randint(600,800)
+    y = randint(300,360)
+    x2 = x + 100
+    y2 = y + 50
+    screen.create_oval(x,y,x2,y2,fill="#C8C8C8",outline="#C8C8C8")
+    
+
+#NECK 
+screen.create_rectangle(260,320,460,440, fill="#FFD4CE", outline ="black")
+
+
+#FACE, NOSE ETC.
+screen.create_polygon(354,407,339,403,322,395,301,376,279,354,246,303,
+                      218,237,219,113,290,31,406,20,504,35,558,96,563,109,
+                      569,118,566,144,560,167,545,200,532,216,469,316,
+                      469,316,449,342,413,378,391,395,376,402,
+                      fill= "#FFD4CE", outline = "black", smooth = True)
+
+screen.create_line(326,344,354,342,370,342,389,344,width = 2)
+
+screen.create_line(394,184,383,199,379,205,378,213,377,225,375,251,width=2, smooth = True)
+
+screen.create_line(352,356,359,356,365,356, width=2.5, smooth = True)
+
+screen.create_line(349,304,354,307, width = 1.5)
+
+screen.create_line(375,304,369,308, width = 1.5)
+
+
+#LEFT EYE - The eyes were really hard to do so that's why they look messy 
+screen.create_polygon(316,194,308,198,301,199,293,201,285,201,277,201,
+                      256,193,250,187,247,179,243,171,248,167,254,165,
+                      260,165,167,165,276,166,289,169,301,176,309,182,
+                      fill = "white")
+
+screen.create_line(309,198,305,200,266,200,254,190,
+                   fill = "black", width = 1.5)
+
+screen.create_line(247,180,241,171,249,169,256,168,262,166,270,166,
+                   279,168,287,170,295,173,303,178,309,183,315,188,
+                   317,190, fill="black", width = 2.5, smooth = True)
+
+screen.create_line(330,171,252,143, width = 3, fill = "black")
+
+screen.create_line(325,184,317,176,306,170,295,164,285,160,273,
+                   158,259,157,251,156, fil="black", smooth = True)
+
+screen.create_line(319,202,311,206,303,208, smooth = True)
+
+screen.create_oval(258,165,298,200, fill="black")
+
+screen.create_polygon(261,174,264,184,261,194,271,194,278,201,284,195,
+                      295,194,290,184,293,174,282,168,273,169,271,173,
+                      fill = "#CC0401", outline = "black")
+
+screen.create_oval(270,175,286,192, outline = "black")
+
+screen.create_oval(276,181,282,186, fill = "black")
+
+screen.create_oval(279,183,285,188, fill = "white")
+
+
+#RIGHT EYE
+screen.create_polygon(411,193,416,197,425,199,432,200,460,200,468,
+                      199,478,192,483,183,479,167,468,163,458,165,
+                      449,166,434,171,425,178,417,184, fill = "white")
+
+screen.create_oval(428,167,468,200, fill="black")
+
+screen.create_polygon(435,168,451,169,452,171,464,173,460,
+                      184,464,194,451,193,447,200,441,192,
+                      431,193,437,183,fill = "#CC0401", outline = "black")
+
+screen.create_oval(440,175,455,190, outline = "black")
+
+screen.create_oval(444,179,450,184, fill = "black")
+
+screen.create_oval(447,181,453,186, fill = "white")
+
+screen.create_line(417,197,420,198,429,198,466,198,473,194,478,
+                   190,481,186, fill="black", width = 1.5, smooth = True)
+
+screen.create_line(412,190,417,184,422,180,427,176,432,173,438,170,
+                   443,167,449,167,458,166,466,166,472,166,477,166,
+                   fill="black",width = 2.5, smooth = True)
+
+screen.create_line(400,168,471,146, width = 3, fill = "black")
+
+screen.create_line(404,184,409,179,413,176,417,174,422,170,429,
+                   167,433,164,439,162,446,160,451,158,459,156,
+                   466,156,471,156,fill = "black", smooth = True)
+
+screen.create_line(409,202,417,206,426,207, smooth = True)
+
+
+
+#HAIR - Random hair color for fun!
+
+c =choice(["#0000ff","#ff0000","#ff8000","#ffff00","#00ff00","#00ffff","#ff00ff","#ff0000",
+            "#20202C","#8000ff","#ffffff","#ff6633","#33ff99","#33ccff","#ccff33"])
+
+# Add "#" to code above and remove "#" below to see original picture 
+#c = "#20202C"
+
+screen.create_polygon(225,254,219,227,215,305,213,333,217,359,
+                      233,323,237,341,241,372,243,392,260,323, fill = c,outline="#20202C")
+
+screen.create_polygon(570,1,143,1,162,19,98,66,160,66,
+                      107,121,165,98,165,113,128,148,157,140,
+                      146,158,139,168,115,217,156,192,156,217,
+                      157,236,158,251,159,275,161,303,164,346,
+                      173,294,198,418,207,339,215,276,222,232,
+                      239,180,272,111,292,75,283,130,279,177,
+                      313,104,320,180,343,114,335,222,376,130,
+                      369,216,420,104,413,189,457,84,481,196,450,
+                      306,479,262,471,317,449,345,448,362,457,380,
+                      457,391,478,356,495,308,507,274,517,275,535,
+                      272,535,229,540,216,563,114,570,94,594,110,
+                      567,53,609,10,571,15, fill = c, outline="#20202C")
+
+#TEXT
+
+screen.create_text(850, 400, text = "Parmvir Bath",
+                   font = "Times 36 bold italic", fill = "#CC0401")  
+
+
+
+
+#GRID
+
+#spacing=20
+#for x in range(0, 1280, spacing): 
+#    screen.create_line(x, 10, x, 1024, fill="black")
+#    screen.create_text(x, 0, text=str(x), font="Times 8", anchor = N)
+
+
+#for y in range(0, 1024, spacing):
+#    screen.create_line(20, y, 1280, y, fill="black")
+#    screen.create_text(0, y, text=str(y), font="Times 8", anchor = W)
