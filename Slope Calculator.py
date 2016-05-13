@@ -1,3 +1,4 @@
+#Created when I first began learning how to program
 print ("*"*60)
 print ("*"*60)
 print("**    This programs calculates the equation of a line     **")
